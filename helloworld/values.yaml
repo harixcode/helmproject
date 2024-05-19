@@ -39,9 +39,9 @@ securityContext: {}
   # runAsNonRoot: true
   # runAsUser: 1000
 
-# service:
-#   type: NodePort
-#   port: 80
+service:
+  type: NodePort
+  port: 80
 ####
 # helloworld/templates/ingress.yaml
 # apiVersion: networking.k8s.io/v1
