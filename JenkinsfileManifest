@@ -14,10 +14,6 @@ node {
                         //def encodedPassword = URLEncoder.encode("$GIT_PASSWORD",'UTF-8')
                         sh "git config user.email hari1000prasad@gmail.com"
                         sh "git config user.name Hariprasad"
-                        //sh "git switch master"
-                        //sh "pwd"
-                        //sh "ls"
-                        //sh "cat deployment.yaml"
                         sh "cat helloworld/templates/deployment.yaml"
                         sh "sed -i 's+harixcode/hello-world-app.*+harixcode/hello-world-app:${DOCKERTAG}+g' helloworld/templates/deployment.yaml"
                         sh "cat helloworld/templates/deployment.yaml"
@@ -28,5 +24,4 @@ node {
     }
   }
 }
-//test
 }
