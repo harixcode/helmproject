@@ -65,25 +65,25 @@ service:
 
 
 #####
-ingress:
-  enabled: true
-  className: ""
-  annotations: {
-    nginx.ingress.kubernetes.io/rewrite-target: /
-  }
-    # kubernetes.io/ingress.class: nginx
-    # kubernetes.io/tls-acme: "true"
-  hosts:
-    - host: helloworld.local
-      paths:
-        - path: /
-          pathType: Prefix
-          ##edit
-          backend:
-              service:
-                name: helloworld
-                port:
-                  number: 80
+# ingress:
+#   enabled: true
+#   className: ""
+#   annotations: {
+#     nginx.ingress.kubernetes.io/rewrite-target: /
+#   }
+#     # kubernetes.io/ingress.class: nginx
+#     # kubernetes.io/tls-acme: "true"
+#   hosts:
+#     - host: helloworld.local
+#       paths:
+#         - path: /
+#           pathType: Prefix
+#           ##edit
+#           backend:
+#               service:
+#                 name: helloworld
+#                 port:
+#                   number: 80
   tls: []
   #  - secretName: chart-example-tls
   #    hosts:
