@@ -64,7 +64,7 @@ service:
 #                   number: 80
 
 
-####
+#####
 ingress:
   enabled: true
   className: ""
@@ -84,8 +84,8 @@ ingress:
                 name: helloworld
                 port:
                   number: 80
- tls: []
-  #  - secretName: chart-example-tlsz
+  tls: []
+  #  - secretName: chart-example-tls
   #    hosts:
   #      - chart-example.local
 
