@@ -18,3 +18,22 @@ spec:
           image: harixcode/hello-world-app:latest
           ports:
             - containerPort: 80
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: postDocker
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: postDocker
+  template:
+    metadata:
+      labels:
+        app: postDocker
+    spec:
+      containers:
+        - name: postDocker
+          image: harixcode/hello-world-app:latest
+          ports:
+            - containerPort: 80
