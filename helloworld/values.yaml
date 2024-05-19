@@ -85,7 +85,7 @@ ingress:
                 port:
                   number: 80
  tls: []
-  #  - secretName: chart-example-tls
+  #  - secretName: chart-example-tlsz
   #    hosts:
   #      - chart-example.local
 
