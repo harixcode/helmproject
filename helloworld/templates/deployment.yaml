@@ -17,4 +17,4 @@ spec:
         - name: helloworld
           image: harixcode/hello-world-app:9
           ports:
-            - containerPort: 80
+            - containerPort: 5000
