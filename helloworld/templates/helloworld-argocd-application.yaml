@@ -1,0 +1,21 @@
+# helloworld-argocd-application.yaml
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: helloworld
+  namespace: argocd
+  # annotations:
+  #   argocd-image-updater.argoproj.io/image-list: harixcode/hello-world-app
+spec:
+  project: default
+  source:
+    repoURL: 'https://github.com/harixcode/helmproject.git'
+    targetRevision: HEAD
+    path: helloworld
+  destination:
+    server: 'https://kubernetes.default.svc'
+    namespace: argocd
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
